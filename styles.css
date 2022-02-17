@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit';
+    
+}
+
+:root{
+    
+    /*PRIMARIOS*/
+    /* para los hover */
+    --primary-soft-blue: hsl(215, 51%, 70%);
+    --primary-Cyan: hsl(178, 100%, 50%);
+
+    /*NEUTRALES*/
+    --neutral-bg-main: hsl(217, 54%, 11%);
+    --neutral-card-BG: hsl(216, 50%, 16%);
+    --neutral-line: hsl(215, 32%, 27%);
+    --neutral-White: hsl(0, 0%, 100%);
+
+    /*o poner el texto que quiera*/
+    /*para dar el valor pondre var(--primary-soft-blue)*/
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('fuentes/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 300;/*por defecto, si lo queremos cabiar donde toque pondre font-weight 400 o 600*/
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    /*el fondo*/
+    background-color: var(--neutral-bg-main) !important;
+}
+
+p{
+    /*pasarlo a rem o vh*/
+    font-size: 2.145vh; /*18px*/
+    color: var(--neutral-line);
+}
+
+.container-fluid{
+    /*la tarjeta*/
+    margin-top: 5%;
+    background-color: var(--neutral-card-BG) !important;
+    /*para que prevalezca sobre la del fondo blanco*/
+    
+}
+
+#linea{/*AJUSTAR PARA HACERSE CON BOOTSTRAP el margin*/
+    background-color: var(--neutral-line);
+    height: 0.2vh;
+}
+
+/*para font weight 400 es fw-normal, de bootstrap*/
+.fw-600{
+    font-weight: 600;
+
+}
+
+span.nombre-hover{
+    color: var(--neutral-White);
+    transition: color .3s;
+}
+span.autor-hover{
+    color: var(--neutral-White);
+    transition: color .3s;
+}
+span.nombre-hover:hover, span.autor-hover:hover{
+    color: var(--primary-Cyan);
+}
+
+.ethereum{
+    color: var(--primary-Cyan);
+}
+
+.br-1{ /*lo he creado yo
+    el de rounded (bootstrap) es 0.25rem ey es muy pco*/
+    border-radius: 1rem !important;
+    width: fit-content !important;
+}
+.br-2{ /*para el nft, el br-1 hace muy poco al poner el padding*/
+    border-radius: 1rem !important;
+}
+
+.fila-autor{
+    max-height: 30% !important;
+    margin-left: 2%;
+    padding: 2.383vh; /*20px*/
+    
+}
+#descripcion, #nft{
+    padding: 2.383vh;/*20px*/
+}
+
+.img-hover figure{
+	background: var(--primary-Cyan);
+    background-image: url(./images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1.2rem !important;/*para que no se vea unos pocos pixeles pongo un poco de mas*/
+    
+     /*para que no se muestre por fuera de los bordes redondeados en forma de cuadrado*/
+    /*asi el efecto solo se vera sobre la imagen  */
+    
+}
+
+.img-hover figure img {
+
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.img-hover figure:hover img {
+	opacity: .2;
+}
+
+.alinear{
+    /*la creo para poner el webkit porque en el class no se puede poner*/
+    vertical-align: -webkit-baseline-middle !important;   
+}
+
+
+@media screen and (max-width: 500px) {
+    
+    .card{
+        width: 375px !important;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    
+    .card{
+        width: 375px !important;
+    }
+
+}
+
+
+.attribution { font-size: 1.311vh; text-align: center; }/*11px*/
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
